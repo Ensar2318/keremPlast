@@ -551,7 +551,7 @@ input:checked + .slider:before {
 }
 .header-top {
   position: relative;
-  z-index: 1;
+  z-index: 5;
 }
 @media (max-width: 992px) {
   .header-top {
@@ -564,6 +564,7 @@ input:checked + .slider:before {
 .header-top .row p {
   font-weight: 700;
   margin-left: 6px;
+  transition: 0.5s;
   position: relative;
 }
 .header-top .row p.underline::after {
@@ -580,6 +581,15 @@ input:checked + .slider:before {
 }
 .header-top .row p.ml {
   margin-left: 20px;
+}
+.header-top .row span {
+  transition: 0.5s;
+}
+.header-top .row a:hover span {
+  color: #00C4B3;
+}
+.header-top .row a:hover p {
+  color: #00C4B3;
 }
 .header-top.dark span {
   color: #627697;
