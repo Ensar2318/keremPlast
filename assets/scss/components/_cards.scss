@@ -22,7 +22,9 @@
     display: flex;
     justify-content: center;
     .mys-button-next,
-    .mys-button-prev {
+    .mys-button-prev,
+    .klab-button-next,
+    .klab-button-prev {
         border: color.$grey solid 2px;
         margin: 0 8px;
         width: 38px;
@@ -294,6 +296,11 @@
 .map-card {
     background-color: #fff;
     border-radius: 60px;
+    .map-container {
+        transition: 1s;
+        overflow: hidden;
+        max-height: 300px;
+    }
     h3 {
         padding: 50px 0 50px 120px;
     }

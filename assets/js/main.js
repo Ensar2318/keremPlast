@@ -52,7 +52,7 @@ $(document).ready(function() {
     });
 
     // Scroll bar reset and scrolling position code
-    
+
     const mediaQuery = window.matchMedia('(max-width: 1000px)');
     $(document).scroll(function() {
         if (!mediaQuery.matches) {
@@ -68,6 +68,18 @@ $(document).ready(function() {
     $($(".hero-top-faq").get().reverse()).each(function(index, element) {
         // element == this
         $(element).css("z-index", (index));
+    });
+
+    // iletisim map side animation
+    var waypoints = $('#map').waypoint(function(direction) {
+       console.log(direction);
+       if(direction==="down"){
+        $("#map .map-container").css("max-height","0px");
+       }else{
+        $("#map .map-container").css("max-height","300px");
+       }
+    }, {
+        offset: '50%'
     });
 
 });
@@ -170,8 +182,8 @@ var klabSwiper = new Swiper(".klabSwiper", {
     loopFillGroupWithBlank: true,
 
     navigation: {
-        nextEl: ".mys-button-next",
-        prevEl: ".mys-button-prev",
+        nextEl: ".klab-button-next",
+        prevEl: ".klab-button-prev",
     },
     breakpoints: {
 

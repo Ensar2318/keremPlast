@@ -922,7 +922,9 @@ header.light span {
   justify-content: center;
 }
 .navigation .mys-button-next,
-.navigation .mys-button-prev {
+.navigation .mys-button-prev,
+.navigation .klab-button-next,
+.navigation .klab-button-prev {
   border: #627697 solid 2px;
   margin: 0 8px;
   width: 38px;
@@ -936,7 +938,9 @@ header.light span {
   transition: 0.5s;
 }
 .navigation .mys-button-next:hover,
-.navigation .mys-button-prev:hover {
+.navigation .mys-button-prev:hover,
+.navigation .klab-button-next:hover,
+.navigation .klab-button-prev:hover {
   background-color: #627697;
   color: #C8CEDA;
 }
@@ -1193,6 +1197,11 @@ header.light span {
 .map-card {
   background-color: #fff;
   border-radius: 60px;
+}
+.map-card .map-container {
+  transition: 1s;
+  overflow: hidden;
+  max-height: 300px;
 }
 .map-card h3 {
   padding: 50px 0 50px 120px;
