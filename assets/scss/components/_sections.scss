@@ -6,6 +6,9 @@ section {
     margin-top: -5px;
     padding: 100px 0 100px 0;
     background-color: color.$light;
+    @include b.sm{
+        margin-top: -15px;
+    }
     &.not {
         background: none;
     }
@@ -14,7 +17,7 @@ section {
         padding-top: 150px;
         h1 {
             color: #fff;
-                margin-bottom: 25px;
+            margin-bottom: 25px;
             &.other {
                 font-size: 52px;
                 line-height: 52px;
@@ -24,12 +27,15 @@ section {
             color: color.$primary;
             font-size: 25px;
         }
-      
     }
 }
 .other-hero-below {
     margin-top: -8px;
     margin-bottom: -6px;
+    @include b.sm {
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
     &.dark {
         fill: color.$secondary;
         background-color: color.$light;
@@ -37,7 +43,7 @@ section {
             background-color: color.$grey;
         }
     }
-    &.grey{
+    &.grey {
         fill: color.$grey;
     }
     &.light {
@@ -117,7 +123,7 @@ section {
         }
         h1 {
             padding-top: 200px;
-            @include b.sm{
+            @include b.sm {
                 text-align: center;
             }
         }
@@ -137,12 +143,12 @@ section {
         height: auto;
         padding-bottom: 30px;
     }
-    &.alot-content{
+    &.alot-content {
         height: 100vh;
-        @include b.lg{
+        @include b.lg {
             height: 120vh;
         }
-        @media(max-height:750px){
+        @media (max-height: 750px) {
             height: 120vh;
         }
     }
@@ -171,7 +177,7 @@ section {
     }
     .buttons {
         margin-top: 30px;
-        @include b.sm{
+        @include b.sm {
             text-align: center;
         }
     }
@@ -194,7 +200,6 @@ section {
         }
         @include b.xl {
             bottom: 30px;
-            
         }
         @include b.md {
             bottom: 150px;
@@ -204,10 +209,10 @@ section {
             display: none;
         }
     }
-    .plastic-v2{
+    .plastic-v2 {
         position: absolute;
         right: -100px;
-      
+
         width: 900px;
         @include b.xxl {
             bottom: 120px;
@@ -225,10 +230,10 @@ section {
         }
     }
 }
-.hero-faq-section{
+.hero-faq-section {
     padding: 0;
     position: relative;
-    .faq-top-svg{
+    .faq-top-svg {
         position: absolute;
         z-index: 99;
         top: -1px;
@@ -242,31 +247,31 @@ section {
     border-radius: 0px 0px 60px 60px;
     box-shadow: 0px 9px 10px 0px #182d4d;
     margin-top: -50px;
-    @include b.sm{
+    @include b.sm {
         padding: 0 40px;
     }
-    &.other{
+    &.other {
         padding-top: 90px;
-        @include b.xxl{
+        @include b.xxl {
             padding-top: 60px;
         }
-        @include b.xl{
+        @include b.xl {
             padding-top: 40px;
         }
-        @include b.lg{
+        @include b.lg {
             padding-top: 30px;
         }
-        @include b.md{
+        @include b.md {
             padding-top: 10px;
         }
-        @include b.sm{
+        @include b.sm {
             padding-top: 0;
         }
     }
     .faq-content {
         overflow: hidden;
         padding-top: 80px;
-        @include b.md{
+        @include b.md {
             padding-top: 40px;
         }
         p {
@@ -281,7 +286,7 @@ section {
         align-items: baseline;
         justify-content: space-between;
         cursor: pointer;
-        @include b.sm{
+        @include b.sm {
             padding: 60px 0 30px 0;
         }
         .plus {
@@ -306,7 +311,7 @@ section {
                 left: 8px;
             }
         }
-      
+
         h3 {
             color: color.$light;
         }
@@ -325,10 +330,8 @@ section {
             }
         }
     }
-    
 }
 .hero-top-faq:first-child {
-   
     .faq-content {
         padding-top: 20px;
     }
@@ -348,9 +351,9 @@ section {
             width: 20px;
             height: 20px;
             position: relative;
-           @include b.md{
-            width: 24px;
-           }
+            @include b.md {
+                width: 24px;
+            }
             .vertical {
                 height: 4px;
                 width: 100%;

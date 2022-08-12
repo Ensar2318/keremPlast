@@ -924,7 +924,9 @@ header.light span {
 .navigation .mys-button-next,
 .navigation .mys-button-prev,
 .navigation .klab-button-next,
-.navigation .klab-button-prev {
+.navigation .klab-button-prev,
+.navigation .fuar-button-next,
+.navigation .fuar-button-prev {
   border: #627697 solid 2px;
   margin: 0 8px;
   width: 38px;
@@ -940,7 +942,9 @@ header.light span {
 .navigation .mys-button-next:hover,
 .navigation .mys-button-prev:hover,
 .navigation .klab-button-next:hover,
-.navigation .klab-button-prev:hover {
+.navigation .klab-button-prev:hover,
+.navigation .fuar-button-next:hover,
+.navigation .fuar-button-prev:hover {
   background-color: #627697;
   color: #C8CEDA;
 }
@@ -1303,6 +1307,11 @@ section {
   padding: 100px 0 100px 0;
   background-color: #F2F5FC;
 }
+@media (max-width: 576px) {
+  section {
+    margin-top: -15px;
+  }
+}
 section.not {
   background: none;
 }
@@ -1325,6 +1334,12 @@ section.other-hero h5 {
 .other-hero-below {
   margin-top: -8px;
   margin-bottom: -6px;
+}
+@media (max-width: 576px) {
+  .other-hero-below {
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
 }
 .other-hero-below.dark {
   fill: #002856;

@@ -111,6 +111,30 @@ var swiper = new Swiper(".mySwiper", {
 
 });
 
+var fuarswiper = new Swiper(".fuarswiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
+
+    navigation: {
+        nextEl: ".fuar-button-next",
+        prevEl: ".fuar-button-prev",
+    },
+    breakpoints: {
+
+        1000: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+        },
+        1500: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+        },
+    }
+
+});
+
 var references = new Swiper(".references", {
     slidesPerView: 1,
     spaceBetween: 30,
