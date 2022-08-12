@@ -6,7 +6,7 @@ section {
     margin-top: -5px;
     padding: 100px 0 100px 0;
     background-color: color.$light;
-    @include b.sm{
+    @include b.sm {
         margin-top: -15px;
     }
     &.not {
@@ -461,6 +461,9 @@ section {
     position: relative;
     &:last-child {
         border-radius: 60px;
+    }
+    @include b.sm {
+        padding: 0 25px;
     }
 
     .faq-title {
