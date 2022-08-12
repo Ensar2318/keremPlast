@@ -60,8 +60,11 @@
 }
 .kaynakcaSwiper {
     margin-right: -38%;
+    margin-left: -38%;
+
     @include b.lg {
-        margin-right: 0;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 }
 .klabSwiper {
@@ -80,6 +83,9 @@
 }
 .fuarswiper {
     margin-right: -50%;
+    @include b.sm {
+        margin-right: 0;
+    }
     img {
         transition: 0.5s;
     }
@@ -95,6 +101,8 @@
         margin-top: -30px;
         @include b.lg {
             margin-top: 0;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0));
+            
         }
         svg {
             fill: color.$grey;
@@ -333,7 +341,6 @@
         @include b.lg {
             padding: 50px;
         }
-       
     }
     .content {
         border-radius: 60px;

@@ -179,10 +179,12 @@ header {
                         z-index: 99;
                         @include b.lg {
                             position: static;
+                            box-shadow: none;
                             opacity: 1;
                             visibility: visible;
-                            margin: 20px 20px 10px 80px;
-                            min-height: 150px;
+                            margin: 0px;
+                            padding: 10px 10px 10px 30px;
+                            min-height: 100px;
                         }
                         a {
                             display: block;
@@ -202,8 +204,7 @@ header {
                             bottom: 15px;
                             left: 20%;
                             @include b.lg {
-                                position: static;
-                                margin: auto !important;
+                                display: none;
                             }
                         }
                     }
@@ -327,7 +328,9 @@ header {
                         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     }
                     nav {
+                        overflow: auto;
                         ol {
+                            overflow: auto;
                             display: block;
                             li {
                                 margin: 10px 0;

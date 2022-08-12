@@ -72,12 +72,12 @@ $(document).ready(function() {
 
     // iletisim map side animation
     var waypoints = $('#map').waypoint(function(direction) {
-       console.log(direction);
-       if(direction==="down"){
-        $("#map .map-container").css("max-height","0px");
-       }else{
-        $("#map .map-container").css("max-height","300px");
-       }
+        console.log(direction);
+        if (direction === "down") {
+            $("#map .map-container").css("max-height", "0px");
+        } else {
+            $("#map .map-container").css("max-height", "300px");
+        }
     }, {
         offset: '50%'
     });
@@ -97,6 +97,26 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".mys-button-next",
         prevEl: ".mys-button-prev",
     },
+    breakpoints: {
+
+        1000: {
+            slidesPerView: 2,
+            spaceBetween: 0,
+        },
+        1500: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+        },
+    }
+
+});
+
+
+var highlightSwiper = new Swiper(".highlightSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    loopFillGroupWithBlank: true,
     breakpoints: {
 
         1000: {
@@ -252,22 +272,23 @@ var kaynakcaSwiper = new Swiper(".kaynakcaSwiper", {
     spaceBetween: 30,
     loop: true,
     loopFillGroupWithBlank: true,
-
+    centeredSlides: true,
     navigation: {
         nextEl: ".mys-button-next",
         prevEl: ".mys-button-prev",
     },
     breakpoints: {
+      
         1000: {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 50,
         },
         1100: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 0,
         },
         1500: {
-            slidesPerView: 4,
+            slidesPerView: 5,
             spaceBetween: 0,
         },
     }
