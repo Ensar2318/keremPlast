@@ -308,6 +308,9 @@ header {
                     padding-top: 80px;
                     z-index: -1;
                     border-radius: 20px;
+                    @include b.lg{
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                    }
                     nav {
                         ol {
                             display: block;
