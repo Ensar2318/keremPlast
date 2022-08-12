@@ -1,0 +1,706 @@
+@use "../abstracts/colors" as color;
+@use "../abstracts/variables" as v;
+@use "../abstracts/breakpoints" as b;
+
+section {
+    padding: 100px 0 100px 0;
+    background-color: color.$light;
+    &.not {
+        background: none;
+    }
+
+    &.other-hero {
+        padding-top: 150px;
+        h1 {
+            &.other {
+                font-size: 52px;
+                line-height: 52px;
+            }
+        }
+        &.dark {
+            background-color: #fff;
+        }
+        &.light {
+            background-color: color.$secondary;
+            h1 {
+                color: #fff;
+                margin-bottom: 25px;
+            }
+            h5 {
+                color: color.$primary;
+                font-size: 25px;
+            }
+        }
+    }
+}
+.other-hero-below {
+    margin-top: -5px;
+    margin-bottom: -3px;
+    &.dark {
+        fill: color.$secondary;
+        background-color: color.$light;
+        &.comment-bg {
+            background-color: color.$grey;
+        }
+    }
+    &.light {
+        display: none;
+    }
+}
+
+.section-title {
+    margin-bottom: 30px;
+    &.mb-50 {
+        margin-bottom: 50px;
+    }
+    &.notpadding {
+        padding-left: 0;
+    }
+    .subtitle {
+        color: color.$grey;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+.page-content {
+    position: relative;
+    h2 {
+        margin-top: v.$xxl;
+    }
+    p {
+        padding-top: 40px;
+        font-weight: 600;
+        color: color.$grey;
+        line-height: 30px;
+    }
+    @include b.md {
+        p {
+            font-size: 18px;
+        }
+    }
+    a {
+        display: inline-block;
+        margin-top: v.$xxl;
+    }
+    svg {
+        &.other {
+            fill: color.$primary;
+        }
+        &.choose {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+.image-page {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    @include b.lg {
+        justify-content: center;
+    }
+    margin-top: 40px;
+}
+
+.hero {
+    height: 80vh;
+    overflow: hidden;
+    padding: 0;
+    &.bg-image {
+        background-image: url("../img/hero-bg.png");
+        margin-top: -40px;
+        background-repeat: no-repeat;
+        background-position: left;
+        @include b.lg {
+            margin-top: 0;
+            background-image: none;
+        }
+        h1 {
+            padding-top: 200px;
+            @include b.sm{
+                text-align: center;
+            }
+        }
+    }
+
+    @media (max-height: 920px) {
+        height: 100vh;
+    }
+
+    @include b.md {
+        height: 89vh;
+    }
+    @include b.sm {
+        height: 79vh;
+    }
+    @media (max-height: 720px) {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    &.alot-content{
+        height: 100vh;
+        @include b.lg{
+            height: 120vh;
+        }
+        @media(max-height:750px){
+            height: 120vh;
+        }
+    }
+
+    position: relative;
+    h1 {
+        color: color.$secondary;
+        padding-top: 150px;
+        &.gradient {
+            background: linear-gradient(95.42deg, #00c4b3 15.19%, #002856 78.15%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    @include b.md {
+        h1 {
+            padding-top: 160px;
+        }
+    }
+    h3 {
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .buttons {
+        margin-top: 30px;
+        @include b.sm{
+            text-align: center;
+        }
+    }
+    .svg {
+        position: absolute;
+        bottom: -12px;
+        z-index: 0;
+        fill: #fff;
+        &.light {
+            fill: color.$light;
+        }
+    }
+    .plastic {
+        position: absolute;
+        right: -100px;
+        bottom: 220px;
+        width: 900px;
+        @include b.xxl {
+            bottom: 120px;
+        }
+        @include b.xl {
+            bottom: 30px;
+            
+        }
+        @include b.md {
+            bottom: 150px;
+        }
+        @include b.sm {
+            bottom: 200px;
+            display: none;
+        }
+    }
+    .plastic-v2{
+        position: absolute;
+        right: -100px;
+      
+        width: 900px;
+        @include b.xxl {
+            bottom: 120px;
+            right: -200px;
+        }
+        @include b.xl {
+            bottom: 30px;
+            right: -300px;
+        }
+        @include b.md {
+            bottom: 150px;
+        }
+        @include b.sm {
+            bottom: 200px;
+        }
+    }
+}
+.hero-faq-section{
+    padding: 0;
+    position: relative;
+    .faq-top-svg{
+        position: absolute;
+        z-index: 99;
+        top: -1px;
+        fill: #fff;
+    }
+}
+
+.hero-top-faq {
+    background-color: color.$grey;
+    position: relative;
+    border-radius: 0px 0px 60px 60px;
+    box-shadow: 0px 9px 10px 0px #182d4d;
+    margin-top: -50px;
+    @include b.sm{
+        padding: 0 40px;
+    }
+    &.other{
+        padding-top: 90px;
+        @include b.xxl{
+            padding-top: 60px;
+        }
+        @include b.xl{
+            padding-top: 40px;
+        }
+        @include b.lg{
+            padding-top: 30px;
+        }
+        @include b.md{
+            padding-top: 10px;
+        }
+        @include b.sm{
+            padding-top: 0;
+        }
+    }
+    .faq-content {
+        overflow: hidden;
+        padding-top: 80px;
+        @include b.md{
+            padding-top: 40px;
+        }
+        p {
+            color: #fff;
+            padding-top: 40px;
+        }
+    }
+    .faq-title {
+        transition: 0.5s;
+        padding: 80px 0 30px 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        cursor: pointer;
+        @include b.sm{
+            padding: 60px 0 30px 0;
+        }
+        .plus {
+            margin-left: auto;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            .vertical {
+                height: 4px;
+                width: 100%;
+                background-color: color.$light;
+                position: absolute;
+                top: 8px;
+                transition: 0.5s;
+            }
+            .horizontal {
+                transition: 0.5s;
+                position: absolute;
+                height: 100%;
+                width: 4px;
+                background-color: color.$light;
+                left: 8px;
+            }
+        }
+      
+        h3 {
+            color: color.$light;
+        }
+    }
+    &.active {
+        .faq-title {
+            padding-top: 20px;
+        }
+        .plus {
+            .horizontal {
+                background-color: color.$light;
+                transform: rotate(90deg);
+            }
+            .vertical {
+                background-color: color.$light;
+            }
+        }
+    }
+    
+}
+.hero-top-faq:first-child {
+   
+    .faq-content {
+        padding-top: 20px;
+    }
+    .faq-title {
+        padding-top: 20px;
+    }
+}
+.faq {
+    padding: 25px 0;
+    border-bottom: solid 1px color.$grey;
+    transition: 0.4s;
+    .faq-title {
+        cursor: pointer;
+        display: flex;
+        .plus {
+            margin-left: auto;
+            width: 20px;
+            height: 20px;
+            position: relative;
+           @include b.md{
+            width: 24px;
+           }
+            .vertical {
+                height: 4px;
+                width: 100%;
+                background-color: color.$ghost;
+                position: absolute;
+                top: 8px;
+                transition: 0.5s;
+            }
+            .horizontal {
+                transition: 0.5s;
+                position: absolute;
+                height: 100%;
+                width: 4px;
+                background-color: color.$ghost;
+                left: 8px;
+            }
+        }
+        p {
+            font-family: "gilroy";
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 19px;
+            color: color.$grey;
+            padding-right: 20px;
+        }
+    }
+    .faq-content {
+        overflow: hidden;
+
+        p {
+            padding-top: 25px;
+            line-height: 26px;
+        }
+        @include b.md {
+            font-size: 14px;
+        }
+    }
+    &.active {
+        .plus {
+            .horizontal {
+                background-color: color.$grey;
+                transform: rotate(90deg);
+            }
+            .vertical {
+                background-color: color.$grey;
+            }
+        }
+    }
+}
+.policy-faq {
+    border-bottom: solid color.$grey 2px;
+    .faq-title {
+        display: flex;
+        align-items: center;
+        padding: 18px 0;
+        cursor: pointer;
+        h5 {
+            color: color.$grey;
+            @include b.sm {
+                font-size: 18px;
+            }
+        }
+        a {
+            margin-left: auto;
+            color: color.$primary;
+            font-size: 16px;
+            font-weight: 700;
+            padding-right: 25px;
+            @include b.sm {
+                font-size: 14px;
+                padding-right: 15px;
+            }
+        }
+        span {
+            color: color.$grey;
+            font-size: 20px;
+            padding-bottom: 6px;
+            transition: 0.5s;
+        }
+    }
+    .faq-content {
+        overflow: hidden;
+
+        p {
+            padding-bottom: 18px;
+        }
+    }
+    &.active {
+        .faq-title {
+            span {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+.lab-faq {
+    background-color: color.$grey;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    border: solid 4px color.$light;
+    margin-top: -40px;
+    padding: 0 115px;
+    transition: 0.5s;
+    position: relative;
+    &:last-child {
+        border-radius: 60px;
+    }
+
+    .faq-title {
+        padding: 20px 0 60px 0;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.5s;
+        span {
+            font-size: 24px;
+            .path1 {
+                &::before {
+                    color: color.$primary-100;
+                }
+            }
+            .path2 {
+                &::before {
+                    color: color.$light;
+                }
+            }
+        }
+        .plus {
+            margin-left: auto;
+            width: 20px;
+            height: 20px;
+            position: relative;
+            .vertical {
+                height: 4px;
+                width: 100%;
+                background-color: color.$light;
+                position: absolute;
+                top: 8px;
+                transition: 0.5s;
+            }
+            .horizontal {
+                transition: 0.5s;
+                position: absolute;
+                height: 100%;
+                width: 4px;
+                background-color: color.$light;
+                left: 8px;
+            }
+        }
+        h5 {
+            color: color.$light;
+            margin-left: 20px;
+        }
+    }
+    .faq-content {
+        p {
+            color: color.$grey;
+        }
+        .row {
+            padding-bottom: 70px;
+        }
+    }
+    &.active {
+        background-color: #fff;
+
+        .faq-title {
+            padding-bottom: 20px;
+            h5 {
+                color: color.$secondary;
+            }
+            span {
+                .path2 {
+                    &::before {
+                        color: color.$secondary;
+                    }
+                }
+            }
+            .plus {
+                .horizontal {
+                    background-color: color.$grey;
+                    transform: rotate(90deg);
+                }
+                .vertical {
+                    background-color: color.$grey;
+                }
+            }
+        }
+    }
+}
+
+.comments {
+    background-color: color.$grey;
+    &.bottom {
+        border-radius: 60px 60px 0px 0px;
+    }
+    &.top {
+        border-radius: 0px 0px 60px 60px;
+        margin-top: -40px;
+    }
+    span {
+        font-family: "gilroy";
+        font-size: 16px;
+        font-weight: 500;
+        color: color.$light;
+        display: block;
+    }
+    p {
+        font-family: "gilroy";
+        font-size: 40px;
+        font-weight: 400;
+        line-height: 49px;
+        letter-spacing: 0em;
+        color: color.$light;
+        margin-bottom: 40px;
+        margin-top: 25px;
+    }
+    @include b.lg {
+        p {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    }
+    @include b.md {
+        p {
+            font-size: 25px;
+        }
+    }
+    .user-card {
+        display: flex;
+        align-items: center;
+
+        .content {
+            margin-left: 15px;
+            span {
+                font-family: "gilroy";
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 19px;
+                margin-bottom: 12px;
+            }
+            h5 {
+                font-family: "TimesNewRoman";
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 30px;
+                color: color.$light;
+            }
+            .link {
+                display: flex;
+                align-items: center;
+                color: color.$primary;
+                font-family: "gilroy";
+                font-size: 14px;
+                font-weight: 700;
+
+                span {
+                    color: color.$primary;
+                    margin: 0;
+                    font-size: 16px;
+                }
+                a {
+                    position: relative;
+                    margin-left: 6px;
+                    display: inline-block;
+                    &.underline {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -6px;
+                            height: 1px;
+                            border-radius: 4px;
+                            background-color: color.$primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blog-card {
+    padding: 25px 20px 0px 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    width: 262px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    position: sticky;
+    box-shadow: 0px 4px 6px rgba(98, 118, 151, 0.5);
+    margin-top: -190px;
+    top: 140px;
+    ul {
+        padding-left: 26px;
+    }
+    li {
+        font-family: "gilroy";
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 19px;
+        margin-bottom: 16px;
+        color: color.$secondary;
+        &.active {
+            color: color.$primary;
+        }
+    }
+    .line {
+        align-self: center;
+        margin-top: 25px;
+        margin-bottom: 15px;
+        height: 8px;
+        width: 62px;
+        background: #00c4b3;
+        border-radius: 4px;
+    }
+}
+
+.blog {
+    h3 {
+        font-family: "timesroman";
+        font-weight: 700;
+        margin-bottom: 32px;
+    }
+    .content {
+        a {
+            color: color.$primary;
+        }
+    }
+
+    b {
+        color: color.$secondary;
+    }
+    p {
+        margin-bottom: 22px;
+    }
+    h4 {
+        margin-bottom: 32px;
+    }
+    h5 {
+        color: color.$secondary;
+    }
+    h6 {
+        color: color.$secondary;
+        font-family: 700;
+        margin-bottom: 20px;
+    }
+}

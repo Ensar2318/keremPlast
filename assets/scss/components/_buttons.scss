@@ -1,0 +1,217 @@
+@use "../abstracts/colors" as color;
+@use "../abstracts/fonts" as *;
+@use "../abstracts/variables" as size;
+.btn-secondary {
+    color: color.$secondary;
+    border: 3px solid color.$secondary;
+    border-radius: 18px;
+    padding: 10px 32px;
+    position: relative;
+    font-family: "gilroy";
+    font-weight: 700;
+    display: inline-block;
+    min-width: 170px;
+    text-align: center;
+    transition: 0.5s;
+    svg {
+        transition: 0.5s;
+        position: absolute;
+        bottom: -3px;
+        right: -3px;
+        fill: color.$secondary;
+    }
+    &:hover {
+        background-color: color.$secondary;
+        color: color.$light;
+        svg {
+            fill: color.$grey;
+        }
+    }
+    &.footer {
+        border: 3px solid color.$primary;
+        color: color.$light;
+        background-color: color.$primary;
+        svg {
+            fill: #6eddd0;
+        }
+        &:hover {
+            background: none;
+            color: color.$primary;
+            svg {
+                fill: color.$primary;
+            }
+        }
+    }
+}
+
+.btn-primary {
+    color: color.$primary;
+    border: 3px solid color.$primary;
+    border-radius: 18px;
+    padding: 10px 32px;
+    text-align: center;
+    min-width: 170px;
+    position: relative;
+    font-family: "gilroy";
+    font-weight: 700;
+    display: inline-block;
+    transition: 0.5s;
+    &:hover {
+        background-color: color.$primary;
+        color: color.$light;
+        svg {
+            fill: color.$primary-100;
+        }
+    }
+    svg {
+        position: absolute;
+        bottom: -3px;
+        right: -3px;
+        fill: color.$primary;
+        transition: 0.5s;
+    }
+
+    &.footer {
+        border: 3px solid color.$light;
+        color: color.$light;
+        svg {
+            fill: color.$light;
+            transition: 0.5s;
+        }
+        &:hover {
+            background-color: color.$light;
+            color: color.$grey;
+            svg {
+                fill: color.$grey;
+            }
+        }
+    }
+}
+
+.read-more {
+    font-weight: 600;
+    color: color.$primary;
+}
+
+.btn-grey {
+    position: relative;
+    font-family: "gilroy";
+    border-radius: 18px;
+    padding: 12px 20px;
+    min-width: 160px;
+    font-weight: 700;
+    transition: 0.5s;
+    display: block;
+    border: solid color.$grey 2px;
+    color: color.$grey;
+
+    svg {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        transition: 0.5s;
+        fill: color.$grey;
+    }
+    &:hover {
+        background-color: color.$grey;
+        color: color.$light;
+        svg {
+            fill: color.$light;
+        }
+    }
+}
+
+.btn-ghost {
+    position: relative;
+    font-family: "gilroy";
+    border-radius: 18px;
+    padding: 12px 20px;
+    min-width: 160px;
+    font-weight: 700;
+    transition: 0.5s;
+    display: block;
+    border: solid color.$ghost 2px;
+    color: color.$ghost;
+    text-align: center;
+
+    svg {
+        position: absolute;
+        bottom: -2px;
+        right: -2px;
+        transition: 0.5s;
+        fill: color.$ghost;
+    }
+    &:hover {
+        background-color: color.$ghost;
+        color: color.$light;
+        svg {
+            fill: color.$light;
+        }
+    }
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    border: solid 2px color.$ghost;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    right: 12px;
+    bottom: -2px;
+    background-color: color.$grey;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #fff;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px color.$ghost;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+.switch-body {
+    p {
+        padding-left: 18px;
+    }
+}

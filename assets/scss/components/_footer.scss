@@ -1,0 +1,100 @@
+@use "../abstracts/breakpoints" as b;
+@use "../abstracts/colors" as color;
+@use "../abstracts/fonts" as fonts;
+@use "../abstracts/variables" as v;
+
+.plastic {
+    text-align: center;
+    margin-bottom: -310px;
+}
+.footer-over {
+    position: relative;
+    margin-bottom: -4px;
+    .capsule{
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        top: 50%;
+        h3{
+            color: #fff;
+            text-align: center;
+        }
+        @include b.md{
+            display: none;
+        }
+    }
+    svg {
+        fill: color.$secondary;
+    }
+}
+footer {
+    padding: 45px 0;
+    background-color: color.$secondary;
+    position: relative;
+    margin-top: -3px;
+    h3 {
+        color: #fff;
+        text-align: center;
+    }
+    .links {
+        margin-top: 60px;
+        padding: 0 120px;
+        @include b.lg {
+            padding: 0px;
+        }
+
+        a {
+            display: block;
+            font-weight: 700;
+            color: color.$light;
+            line-height: 20px;
+
+            &:hover {
+                color: color.$primary;
+            }
+            &.title {
+                color: color.$primary;
+                @include b.md {
+                    margin-top: 30px;
+                }
+            }
+
+            & + a {
+                margin-top: 15px;
+            }
+        }
+    }
+    .logos {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: v.$lg;
+        border-bottom: solid 1px color.$grey;
+        @include b.md {
+            margin-top: 40px;
+        }
+    }
+    .copyright {
+        padding-top: 40px;
+        display: flex;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 17px;
+        color: #fff;
+        @include b.lg {
+            flex-direction: column;
+        }
+        a {
+            margin-left: 18px;
+            &:hover {
+                color: color.$primary;
+            }
+            span {
+                font-size: 16px;
+            }
+        }
+        p{
+            color: #fff;
+        }
+    }
+}
