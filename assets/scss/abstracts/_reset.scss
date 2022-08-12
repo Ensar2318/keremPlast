@@ -1,0 +1,44 @@
+@use 'fonts' as *;
+// reset Css
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1;
+    color: inherit;
+}
+
+html,
+body {
+    font-family: "gilroy";
+    font-size: 16px;
+    
+    
+    //background-color: var(--ui-color-light);
+}
+
+a,
+a:link,
+a:hover {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+button,
+input,
+textarea {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    background: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
