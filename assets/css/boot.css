@@ -666,6 +666,7 @@ header nav ol li.dropdown:hover .dropdown-container {
 header nav ol li.dropdown:hover .dropdown-content {
   opacity: 1;
   visibility: visible;
+  overflow-y: auto;
 }
 @media (max-width: 992px) {
   header nav ol li.dropdown .dropdown-container {
@@ -829,6 +830,13 @@ header.light span {
     z-index: -1;
     border-radius: 20px;
   }
+}
+@media (max-width: 992px) and (max-width: 992px) {
+  header.mobile .row .nav-side {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+@media (max-width: 992px) {
   header.mobile .row .nav-side nav ol {
     display: block;
   }
@@ -866,6 +874,8 @@ header.light span {
     height: 4px;
     border-radius: 4px;
   }
+}
+@media (max-width: 992px) {
   header.mobile .navbar-toggle {
     color: #00C4B3;
     display: flex;
@@ -874,12 +884,18 @@ header.light span {
     font-weight: 700;
     margin-right: 15px;
   }
+}
+@media (max-width: 992px) {
   header.mobile img {
     margin-left: 15px;
   }
+}
+@media (max-width: 992px) {
   header.mobile .btn-mail {
     display: none;
   }
+}
+@media (max-width: 992px) {
   header.mobile-active .row .nav-side {
     transform: translateY(0);
     opacity: 1;
@@ -1274,6 +1290,7 @@ header.light span {
 }
 
 section {
+  margin-top: -5px;
   padding: 100px 0 100px 0;
   background-color: #F2F5FC;
 }
@@ -1297,8 +1314,8 @@ section.other-hero h5 {
 }
 
 .other-hero-below {
-  margin-top: -5px;
-  margin-bottom: -3px;
+  margin-top: -8px;
+  margin-bottom: -6px;
 }
 .other-hero-below.dark {
   fill: #002856;
