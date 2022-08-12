@@ -6,9 +6,7 @@ section {
     margin-top: -5px;
     padding: 100px 0 100px 0;
     background-color: color.$light;
-    @include b.sm {
-        margin-top: -15px;
-    }
+    
     &.not {
         background: none;
     }

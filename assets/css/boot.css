@@ -1308,11 +1308,6 @@ section {
   padding: 100px 0 100px 0;
   background-color: #F2F5FC;
 }
-@media (max-width: 576px) {
-  section {
-    margin-top: -15px;
-  }
-}
 section.not {
   background: none;
 }
