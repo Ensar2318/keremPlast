@@ -829,6 +829,7 @@ header.light span {
     padding-top: 80px;
     z-index: -1;
     border-radius: 20px;
+    overflow-y: auto;
   }
 }
 @media (max-width: 992px) and (max-width: 992px) {
