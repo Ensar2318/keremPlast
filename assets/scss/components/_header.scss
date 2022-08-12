@@ -139,6 +139,7 @@ header {
                         .dropdown-content {
                             opacity: 1;
                             visibility: visible;
+                            overflow-y: auto;
                         }
                     }
                     .dropdown-container {
