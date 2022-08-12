@@ -6,7 +6,10 @@ section {
     margin-top: -5px;
     padding: 100px 0 100px 0;
     background-color: color.$light;
-    
+    @include b.sm{
+        padding: 70px 0 70px 0;
+    }
+
     &.not {
         background: none;
     }
@@ -147,7 +150,7 @@ section {
             height: 120vh;
         }
         @media (max-height: 750px) {
-            height: 120vh;
+            height: 100%;
         }
     }
 
@@ -344,14 +347,13 @@ section {
     .faq-title {
         cursor: pointer;
         display: flex;
+
         .plus {
             margin-left: auto;
             width: 20px;
             height: 20px;
             position: relative;
-            @include b.md {
-                width: 24px;
-            }
+
             .vertical {
                 height: 4px;
                 width: 100%;
@@ -376,6 +378,9 @@ section {
             line-height: 19px;
             color: color.$grey;
             padding-right: 20px;
+            @include b.sm {
+                width: 90%;
+            }
         }
     }
     .faq-content {
@@ -412,6 +417,7 @@ section {
             color: color.$grey;
             @include b.sm {
                 font-size: 18px;
+                width: 50%;
             }
         }
         a {
@@ -547,14 +553,23 @@ section {
 }
 
 .comments {
-    background-color: color.$grey;
-    &.bottom {
-        border-radius: 60px 60px 0px 0px;
+    background-color: color.$light;
+    padding: 0;
+
+    .in-comment {
+        padding: 100px 0;
+        @include b.sm {
+            padding: 70px 0;
+        }
+        &.top {
+            border-radius: 0px 0px 60px 60px;
+            margin-top: -40px;
+        }
+        &.bottom {
+            border-radius: 60px 60px 0px 0px;
+        }
     }
-    &.top {
-        border-radius: 0px 0px 60px 60px;
-        margin-top: -40px;
-    }
+
     span {
         font-family: "gilroy";
         font-size: 16px;

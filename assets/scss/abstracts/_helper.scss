@@ -1,4 +1,6 @@
 @use "../abstracts/colors" as color;
+@use "../abstracts/breakpoints" as b;
+
 .text-end {
     text-align: end;
 }
@@ -26,7 +28,11 @@
     margin-top: 50px;
 }
 
-
+.mt-n-sm-15{
+    @include b.sm{
+        margin-top: -15px;
+    }
+}
 
 .mb-10 {
     margin-bottom: 10px;
@@ -42,6 +48,11 @@
 
 .mb-40 {
     margin-bottom: 40px;
+}
+.mb-hlg-40{
+    @media(max-height:750px){
+        margin-bottom: 40px;
+    }
 }
 
 .mb-50 {
