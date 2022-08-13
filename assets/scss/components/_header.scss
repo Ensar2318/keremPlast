@@ -107,6 +107,9 @@ header {
     }
     &.scrolled {
         transform: translateY(-20px);
+        @include b.lg{
+            transform: translateY(0px);
+        }
     }
     nav {
         ol {
@@ -324,6 +327,8 @@ header {
                     z-index: -1;
                     border-radius: 20px;
                     overflow-y: auto;
+                    overflow-y: auto;
+                    max-height: calc(100vh - 80px);
                     @include b.lg {
                         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
                     }
@@ -368,6 +373,30 @@ header {
                             }
                         }
                     }
+                    .lang-dropdown {
+                        position: absolute;
+                        right: 0;
+                        bottom: 40px;
+                        .lang {
+                            width: 40px;
+                            span{
+                                margin-left: 4px;
+                                color: color.$secondary;
+                            }
+                        }
+                        .dropdown-content {
+                            position: relative;
+                            top: -30px;
+                            right: 20px;
+                            ul {
+                                list-style: none;
+                                a{
+                                    font-family: 'gilroy';
+                                    font-weight: 700;
+                                }
+                            }
+                        }
+                    }
                 }
             }
             .navbar-toggle {
@@ -395,3 +424,5 @@ header {
         }
     }
 }
+
+

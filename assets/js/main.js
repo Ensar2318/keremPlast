@@ -53,14 +53,12 @@ $(document).ready(function() {
 
     // Scroll bar reset and scrolling position code
 
-    const mediaQuery = window.matchMedia('(max-width: 1000px)');
+   
     $(document).scroll(function() {
-        if (!mediaQuery.matches) {
-            if (window.pageYOffset >= 50) {
-                $("header").addClass("scrolled");
-            } else {
-                $("header").removeClass("scrolled");
-            }
+        if (window.pageYOffset >= 50) {
+            $("header").addClass("scrolled");
+        } else {
+            $("header").removeClass("scrolled");
         }
     });
 
