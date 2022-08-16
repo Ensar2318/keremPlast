@@ -122,7 +122,6 @@ header {
                     position: relative;
                     padding: 0 20px;
                     transition: 0.5s;
-                 
 
                     span {
                         font-size: 12px;
@@ -349,7 +348,7 @@ header {
                                 margin: 10px 0;
                                 a {
                                     color: color.$secondary;
-                                    &.active{
+                                    &.active {
                                         color: color.$primary;
                                     }
                                 }
@@ -384,26 +383,58 @@ header {
                             }
                         }
                     }
-                    .lang-dropdown {
+                    .lang-dropdown-wrap {
                         position: absolute;
-                        right: 0;
-                        bottom: 40px;
-                        .lang {
-                            width: 40px;
-                            span {
-                                margin-left: 4px;
-                                color: color.$secondary;
-                            }
-                        }
-                        .dropdown-content {
+                        right: 30px;
+                        bottom: 30px;
+                        .lang-dropdown {
                             position: relative;
-                            top: -30px;
-                            right: 20px;
-                            ul {
-                                list-style: none;
+                            display: inline-block;
+                            a {
+                                color: color.$secondary;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                font: 700 15px "gilroy";
+                                &.underline-lang {
+                                    &::after {
+                                        content: "";
+                                        position: absolute;
+                                        left: 0;
+                                        right: 0;
+                                        bottom: -6px;
+                                        height: 4px;
+                                        border-radius: 4px;
+                                        background-color: color.$primary;
+                                    }
+                                }
+                                .icon-chevron-down {
+                                    transition: 0.7s;
+                                    color: color.$secondary;
+                                }
+                            }
+                            &:hover {
+                                .lang-dropdown-content {
+                                    max-height: 200px;
+                                }
                                 a {
-                                    font-family: "gilroy";
-                                    font-weight: 700;
+                                    .icon-chevron-down {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+                            .lang-dropdown-content {
+                                transition: 0.5s;
+                                position: absolute;
+                                top: -40px;
+                                left: 0;
+                                z-index: 1;
+                                overflow: hidden;
+                                max-height: 0px;
+                                a {
+                                    span {
+                                        color: color.$secondary;
+                                    }
                                 }
                             }
                         }

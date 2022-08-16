@@ -927,29 +927,53 @@ header.light span {
   }
 }
 @media (max-width: 992px) {
-  header.mobile .row .nav-side .lang-dropdown {
+  header.mobile .row .nav-side .lang-dropdown-wrap {
     position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown a {
+    color: #002856;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font: 700 15px "gilroy";
+  }
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown a.underline-lang::after {
+    content: "";
+    position: absolute;
+    left: 0;
     right: 0;
-    bottom: 40px;
+    bottom: -6px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: #00C4B3;
   }
-  header.mobile .row .nav-side .lang-dropdown .lang {
-    width: 40px;
-  }
-  header.mobile .row .nav-side .lang-dropdown .lang span {
-    margin-left: 4px;
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown a .icon-chevron-down {
+    transition: 0.5s;
     color: #002856;
   }
-  header.mobile .row .nav-side .lang-dropdown .dropdown-content {
-    position: relative;
-    top: -30px;
-    right: 20px;
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown:hover .lang-dropdown-content {
+    max-height: 200px;
   }
-  header.mobile .row .nav-side .lang-dropdown .dropdown-content ul {
-    list-style: none;
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown:hover a .icon-chevron-down {
+    transform: rotate(180deg);
   }
-  header.mobile .row .nav-side .lang-dropdown .dropdown-content ul a {
-    font-family: "gilroy";
-    font-weight: 700;
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown .lang-dropdown-content {
+    transition: 0.5s;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: 1;
+    overflow: hidden;
+    max-height: 0px;
+  }
+  header.mobile .row .nav-side .lang-dropdown-wrap .lang-dropdown .lang-dropdown-content a span {
+    color: #002856;
   }
 }
 @media (max-width: 992px) {
