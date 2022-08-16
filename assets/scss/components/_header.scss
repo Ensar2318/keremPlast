@@ -107,7 +107,7 @@ header {
     }
     &.scrolled {
         transform: translateY(-20px);
-        @include b.lg{
+        @include b.lg {
             transform: translateY(0px);
         }
     }
@@ -122,6 +122,7 @@ header {
                     position: relative;
                     padding: 0 20px;
                     transition: 0.5s;
+                 
 
                     span {
                         font-size: 12px;
@@ -168,7 +169,7 @@ header {
                     .dropdown-content {
                         position: absolute;
                         background-color: color.$light;
-                        min-width: 170px;
+                        min-width: 180px;
                         min-height: 185px;
                         border-radius: 30px;
                         padding: 25px 25px 25px 25px;
@@ -194,6 +195,7 @@ header {
                             margin: 0 0 10px 0;
                             padding: 0;
                             color: color.$secondary;
+                            line-height: 18px;
                             &.active {
                                 color: color.$primary;
                             }
@@ -241,6 +243,9 @@ header {
             nav {
                 ol li a {
                     color: color.$light;
+                    &.active {
+                        color: color.$primary;
+                    }
                     &:hover {
                         color: color.$primary;
                     }
@@ -281,6 +286,9 @@ header {
             nav {
                 ol li a {
                     color: color.$secondary;
+                    &.active {
+                        color: color.$primary;
+                    }
                     &:hover {
                         color: color.$primary;
                     }
@@ -379,7 +387,7 @@ header {
                         bottom: 40px;
                         .lang {
                             width: 40px;
-                            span{
+                            span {
                                 margin-left: 4px;
                                 color: color.$secondary;
                             }
@@ -390,8 +398,8 @@ header {
                             right: 20px;
                             ul {
                                 list-style: none;
-                                a{
-                                    font-family: 'gilroy';
+                                a {
+                                    font-family: "gilroy";
                                     font-weight: 700;
                                 }
                             }
@@ -424,5 +432,3 @@ header {
         }
     }
 }
-
-

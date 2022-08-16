@@ -50,6 +50,8 @@ html,
 body {
   font-family: "gilroy";
   font-size: 16px;
+  scroll-padding-top: 50px;
+  scroll-behavior: smooth;
 }
 
 a,
@@ -709,7 +711,7 @@ header nav ol li.dropdown:hover .dropdown-content {
 header nav ol li.dropdown .dropdown-content {
   position: absolute;
   background-color: #F2F5FC;
-  min-width: 170px;
+  min-width: 180px;
   min-height: 185px;
   border-radius: 30px;
   padding: 25px 25px 25px 25px;
@@ -738,6 +740,7 @@ header nav ol li.dropdown .dropdown-content a {
   margin: 0 0 10px 0;
   padding: 0;
   color: #002856;
+  line-height: 18px;
 }
 header nav ol li.dropdown .dropdown-content a.active {
   color: #00C4B3;
@@ -783,6 +786,9 @@ header.dark .header-content {
 header.dark .header-content nav ol li a {
   color: #F2F5FC;
 }
+header.dark .header-content nav ol li a.active {
+  color: #00C4B3;
+}
 header.dark .header-content nav ol li a:hover {
   color: #00C4B3;
 }
@@ -818,6 +824,9 @@ header.light .header-content {
 }
 header.light .header-content nav ol li a {
   color: #002856;
+}
+header.light .header-content nav ol li a.active {
+  color: #00C4B3;
 }
 header.light .header-content nav ol li a:hover {
   color: #00C4B3;
