@@ -894,6 +894,9 @@ header.light span {
   header.mobile .row .nav-side nav ol li a {
     color: #002856;
   }
+  header.mobile .row .nav-side nav ol li a.active {
+    color: #00C4B3;
+  }
   header.mobile .row .nav-side nav .line {
     height: 8px;
     width: 40%;

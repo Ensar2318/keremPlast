@@ -349,6 +349,9 @@ header {
                                 margin: 10px 0;
                                 a {
                                     color: color.$secondary;
+                                    &.active{
+                                        color: color.$primary;
+                                    }
                                 }
                             }
                         }
